@@ -1,0 +1,16 @@
+provider_openstack = {
+  region    = "{KR1,KR2,JP1,US1}"
+  auth_url  = "https://api-identity.infrastructure.cloud.toast.com/v2.0"
+  tenant_id = "<tenant_id_of_compute_api_endpoint>"
+  user_name = "user_email"
+  password  = "<password_of_compute_api_endpoint>"
+}
+
+machines = [
+  {
+    name              = "consul-serv01"
+    availability_zone = "kr-pub-a"
+    flavor_name       = "t2.c1m1"
+    key_pair          = "keypair_name"
+  },
+]
